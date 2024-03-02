@@ -9,5 +9,23 @@ There is no automated test for this one, this is more for you to understand time
 */
 
 function calculateTime(n) {
-    return 0.01;
+    // Record the start time
+    let startTime = new Date();
+
+    for (let i = 1; i <= n; i++) {}
+
+    // Record the end time
+    let endTime = new Date();
+
+    // Calculate the time difference in milliseconds
+    let elapsedTimeInMilliseconds = endTime - startTime;
+
+    // Convert milliseconds to seconds
+    let elapsedTimeInSeconds = elapsedTimeInMilliseconds / 1000;
+
+    return elapsedTimeInSeconds;
 }
+
+// Example usage:
+const result = calculateTime(1000000);
+console.log(`Time taken: ${result} seconds`);

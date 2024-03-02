@@ -4,6 +4,24 @@
 */
 
 function isPalindrome(str) {
+  /*
+  str=str.toLowerCase().replace(/[^a-zA-Z0-9]/g,'');
+  for( let i=0;i<str.length/2;i++){
+    if(str[i] != str[str.length-i-1]){
+      return false;
+    }
+    
+  }
+  */
+  str=str.toLowerCase().replace(/[^a-zA-Z0-9]/g,'');
+  const reverse=str.split('').reverse().join('');
+  for( let i=0;i<str.length/2;i++){
+    if(str[i] != reverse[i]){
+      return false;
+    }
+    
+  }
+
   return true;
 }
 
